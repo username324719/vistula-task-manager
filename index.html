@@ -1,34 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
-    <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Task Manager</h1>
-    <p>Student ID: <span id="student-id">73703</span></p>
+    <header>
+        <h1>Task Manager</h1>
+        <p>Student ID: <strong id="student-id">73703</strong></p>
+    </header>
 
-    <h2>Add Task</h2>
+    <hr>
 
-    <form id="task-form">
-        <label for="task-title">Title</label>
-        <input type="text" id="task-title" required>
+    <main>
+        <section>
+            <h2>Task Management</h2>
 
-        <label for="task-description">Description</label>
-        <textarea id="task-description"></textarea>
+            <form id="task-form">
+                <fieldset>
+                    <legend>Add or Edit Task</legend>
 
-        <button type="submit" id="task-submit">Add Task</button>
-    </form>
+                    <p>
+                        <label for="task-title">Task Title:</label>
+                        <br>
+                        <input type="text" id="task-title" required>
+                    </p>
 
-    <p id="status-message"></p>
+                    <p>
+                        <label for="task-description">Description:</label>
+                        <br>
+                        <textarea id="task-description" rows="4" cols="40"></textarea>
+                    </p>
 
-    <h2>My Tasks</h2>
-    <div id="task-list"></div>
+                    <button type="submit" id="task-submit">Add Task</button>
+                </fieldset>
+            </form>
 
-    <a href="contribution.html" id="contribution-link">Team Contribution</a>
+            <p id="status-message"></p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>My Tasks</h2>
+            <div id="task-list"></div>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>
+            <a href="contribution.html" id="contribution-link">Team Contribution</a>
+        </p>
+    </footer>
 </body>
 </html>
